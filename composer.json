@@ -1,0 +1,75 @@
+{
+    "name": "symfony/framework-standard-edition",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.1.*",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.0.*",
+        "twig/extensions": "1.0.*",
+        "symfony/assetic-bundle": "2.1.*",
+	    "symfony/swiftmailer-bundle": "2.1.*",
+	    "symfony/monolog-bundle": "2.1.*",
+        "sensio/distribution-bundle": "2.1.*",
+        "sensio/framework-extra-bundle": "2.1.*",
+        "sensio/generator-bundle": "2.1.*",
+        "jms/security-extra-bundle": "1.2.*",
+        "jms/di-extra-bundle": "1.1.*",
+        "friendsofsymfony/user-bundle": "v1.3.1 as dev-master",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "sonata-project/doctrine-extensions": "dev-master",
+        "sonata-project/user-bundle": "dev-master#92a144c020ff5e9eb6c89a4afcdb79131eadaf20",
+        "sonata-project/cache-bundle": "dev-master",
+        "sonata-project/intl-bundle": "dev-master",
+        "sonata-project/page-bundle": "dev-master",
+        "sonata-project/formatter-bundle": "dev-master",
+        "sonata-project/media-bundle": "dev-master",
+        "sonata-project/news-bundle": "dev-master",
+        "sonata-project/seo-bundle": "dev-master",
+        "sonata-project/notification-bundle": "dev-master",
+        "sonata-project/doctrine-mongodb-admin-bundle": "dev-master",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*@dev",
+        "stof/doctrine-extensions-bundle": "1.1.x-dev",
+        "raulfraile/ladybug-bundle": "dev-master",
+        "mopa/bootstrap-bundle": "dev-master",
+        "twitter/bootstrap": "master",
+        "knplabs/knp-paginator-bundle": "dev-master",
+        "craue/formflow-bundle": "dev-master",
+        "ob/highcharts-bundle": "dev-master",
+        "willdurand/faker-bundle": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master",
+	    "instaclick/base-test-bundle": "dev-master",
+        "jms/translation-bundle": "1.1.*@dev",
+	    "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "friendsofsymfony/jsrouting-bundle": "1.1.*@dev",
+        "friendsofsymfony/rest-bundle": "0.11.*@dev",
+        "nelmio/api-doc-bundle": "2.0.*@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web"
+    }
+}
